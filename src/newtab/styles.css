@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dw-bg: #080810;
+  --dw-surface: #0F0F1A;
+  --dw-card: #121220;
+  --dw-elevated: #1A1A2E;
+  --dw-border: rgba(255,255,255,0.06);
+  --dw-accent: #7C3AED;
+  --dw-text: #F1F5F9;
+  --dw-text-2: #94A3B8;
+  --dw-text-3: #475569;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--dw-bg);
+  color: var(--dw-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+.card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.055);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+
+button:focus-visible { outline: 2px solid rgba(124,58,237,0.6); outline-offset: 2px; }
+input:focus { outline: none; }
+::selection { background: rgba(124,58,237,0.3); color: #F1F5F9; }
+.font-mono { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
